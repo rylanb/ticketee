@@ -120,6 +120,10 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
+And /^I should see page title as "(.*)"$/ do |title|
+  page.find(:xpath, '//title', visible: false).has_content?(title)
+end
+
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should have_no_content(text)
