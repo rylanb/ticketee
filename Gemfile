@@ -18,8 +18,14 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem 'rspec-rails'
+end
+
 group :test do
-  gem 'turn', :require => false
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 # To use ActiveModel has_secure_password
