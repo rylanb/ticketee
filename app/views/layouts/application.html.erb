@@ -10,7 +10,8 @@
 
   <%= render partial: "layouts/flash", locals: {flash: flash} %>
 
-  <h1><%= link_to "Ticketee", root_path %></h1>
+  <%= render partial: "layouts/header" %>
+
   <%= yield %>
 
 </body>
