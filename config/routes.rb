@@ -6,6 +6,11 @@ Ticketee::Application.routes.draw do
 
   resources :projects do
    resources :tickets
- end
+  end
+
+
+  namespace :admin do
+    resources :users
+  end
 
 end
