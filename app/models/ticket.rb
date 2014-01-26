@@ -1,6 +1,7 @@
 class Ticket < ActiveRecord::Base
   belongs_to :project
-  attr_accessible :description, :title
+  belongs_to :user
+  attr_accessible :description, :title, :user
   validates_presence_of :title
   validates :description, :presence => true,
                           :length => { :minimum => 10 }
