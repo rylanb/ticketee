@@ -33,7 +33,7 @@ World(WithinHelpers)
 
 # Single-line step scoper
 When /^(.*) within ([^:]+)$/ do |step, parent|
-  with_scope(parent) { When step }
+  with_scope(parent) { step } #took out When step to just step
 end
 
 # Multi-line step scoper
