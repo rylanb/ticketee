@@ -36,6 +36,12 @@ class TicketsController < ApplicationController
   def show
   end
 
+  def destroy
+    @ticket.destroy
+    redirect_to project_path(@project),
+    notice: "#{@ticket.title} has been deleted!"
+  end
+
   private
 
     def find_project
