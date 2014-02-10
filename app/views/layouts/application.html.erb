@@ -11,6 +11,9 @@
   <%= render partial: "layouts/flash", locals: {flash: flash} %>
 
   <%= render partial: "layouts/header" %>
+  <%= admins_only do %>
+    <%= link_to "Admin", admin_root_path %><br>
+  <% end %>
 
   <%= yield %>
 
